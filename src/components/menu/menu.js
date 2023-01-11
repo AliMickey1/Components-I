@@ -48,16 +48,16 @@ menuArray.forEach(menuText => {
   menuList.appendChild(item);
 })
 
-const menuSelect = document.querySelector('.menu-button');
+const menuSelect = document.querySelector('.menu');
 
 menuSelect.addEventListener('click', () => {
-  newMenu.classList.toggle('menu--open')
+  newMenu.classList.toggle('menu--open');
 })
   return newMenu;
 }
 
-console.log(newMenu(menuItems));
+console.log(menuMaker(menuItems));
 
-document
-  .querySelector('.header')
-  .appendChild(menuMaker(menuItems));
+const aMenu = menuMaker(menuItems);
+const headerElement = document.querySelector('.header');
+headerElement.appendChild(aMenu);
